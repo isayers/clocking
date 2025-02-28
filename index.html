@@ -31,19 +31,7 @@
     .video-section {
       width: 100%;
       height: 400px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .video-section video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Fallback Message */
-    .fallback-message {
-      display: none;
+      overflow:;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -284,24 +272,26 @@
     function closeModal() {
       document.getElementById('modal').style.display = 'none';
     }
- // Check if the video is playing
+
+    // Check if the video is playing
     const video = document.getElementById('background-video');
     const fallbackMessage = document.getElementById('fallback-message');
 
     video.addEventListener('play', () => {
       fallbackMessage.style.display = 'none';
+      video.muted = false; // Unmute the video
     });
 
     video.addEventListener('pause', () => {
       fallbackMessage.style.display = 'block';
     });
-
-    // Prompt the user to play the video if it doesn't autoplay
+// Prompt the user to play the video if it doesn't autoplay
     setTimeout(() => {
       if (video.paused) {
         fallbackMessage.style.display = 'block';
         fallbackMessage.addEventListener('click', () => {
           video.play();
+          video.muted = false; // Unmute the video
           fallbackMessage.style.display = 'none';
         });
       }
