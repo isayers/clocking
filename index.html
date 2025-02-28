@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock-In & Clock-Out Guide - We One</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Video Section */
+    .video-section {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .video-section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Header */
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .section ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .section ul li {
+      margin-bottom: 10px;
+    }
+
+    /* OneApp Section */
+    .oneapp-section {
+      background-color: #ecf0f1;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .oneapp-section h3 {
+      font-size: 1.5rem;
+      color: #2c3e50;
+    }
+
+    /* Download Button */
+    .download-button {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .download-button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Popup Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      width: 300px;
+    }
+
+    .modal-content button {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin: 10px;
+    }
+
+    .modal-content button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Geographical Range Reminder */
+    .geo-reminder {
+      background-color: #e74c3c;
+      color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.8rem;
+      }
+
+      .section p {
+        font-size: 1rem;
+      }
+
+      .video-section {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Video Section -->
+  <div class="video-section">
+    <video autoplay loop muted>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Clock-In & Clock-Out Guide</h1>
+    <p>Learn how to use the new system and OneApp for accurate attendance tracking.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Step-by-Step Guide -->
+    <div class="section">
+      <h2>Step-by-Step Guide</h2>
+      <p>Follow these steps to clock in and out using the new system:</p>
+      <ul>
+        <li><strong>Step 1:</strong> When you arrive, scan your ID card at the terminal to <strong>Clock-In</strong>.</li>
+        <li><strong>Step 2:</strong> Before you leave, scan your card again to <strong>Clock-Out</strong>.</li>
+        <li><strong>Step 3:</strong> Ensure your hours are logged accurately for salary processing.</li>
+      </ul>
+    </div>
+
+    <!-- OneApp Section -->
+    <div class="section oneapp-section">
+      <h2>Using the OneApp</h2>
+      <p>You can also clock in and out using the <strong>OneApp</strong> on your mobile device. Here's how:</p>
+      <ul>
+        <li>Download and log in to the <strong>OneApp</strong>.</li>
+        <li>Tap the <strong>Clock-In</strong> button when you arrive.</li>
+        <li>Tap the <strong>Clock-Out</strong> button when you leave.</li>
+      </ul>
+      <p><strong>Note:</strong> The OneApp works alongside the terminal punch cards, giving you flexibility.</p>
+      <button class="download-button" onclick="openModal()">Download OneApp</button>
+    </div>
+
+    <!-- Geographical Range Reminder -->
+    <div class="geo-reminder">
+      <h3>Geographical Range Reminder</h3>
+      <p>To use the OneApp for clocking in and out, you must be within the <strong>eligible geographical range</strong>. If you're outside this range, use the terminal punch cards.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 We One. All rights reserved. | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  <!-- Popup Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3>Download OneApp</h3>
+      <p>Choose your platform:</p>
+      <button onclick="window.open('https://play.google.com/store', '_blank')">Android</button>
+      <button onclick="window.open('https://www.apple.com/app-store/', '_blank')">iOS</button>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Open the modal
+    function openModal() {
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    // Close the modal
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    // Example: Add a confirmation message when the page loads
+    window.onload = function() {
+      alert("Welcome to the Clock-In & Clock-Out Guide! Follow the steps to ensure accurate attendance tracking.");
+    };
+  </script>
+</body>
+</html>
