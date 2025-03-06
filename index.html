@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clock-In & Clock-Out Guide - We One</title>
   <style>
+    /* Page Loader Styles */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #2c3e50; /* Dark background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeOut 1s 5s forwards; /* Fade out after 5 seconds */
+    }
+
+    .loader video {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
     /* General Styles */
     body {
       font-family: 'Arial', sans-serif;
@@ -225,6 +252,14 @@
   </style>
 </head>
 <body>
+  <!-- Page Loader -->
+  <div class="loader">
+    <video autoplay muted loop playsinline id="loader-video">
+      <source src="weone.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
   <!-- Video Section -->
   <div class="video-section">
     <video autoplay loop playsinline muted id="background-video">
@@ -337,6 +372,14 @@
         video.muted = true;
         muteButton.textContent = 'Unmute';
       }
+    });
+
+    // Hide the loader after the video ends
+    const loaderVideo = document.getElementById('loader-video');
+    const loader = document.querySelector('.loader');
+
+    loaderVideo.addEventListener('ended', () => {
+      loader.style.display = 'none';
     });
   </script>
 </body>
